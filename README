@@ -4,8 +4,9 @@ FrikQCC 2.7:  QuakeC Compiler
 Frikqcc is released under the GNU General Public License
 
 I have a recent interest in Quake modding, however there are no available QuakeC compilers for OS X 10.7.
-Luckily, source is available for many of the better compilers back in their prime.  This is just a rehost
-with a little bit of cleanup work done in order to get a working version for OS X 10.7.  
+Luckily, source is available for many of the better compilers back in their prime.  
+This is just a rehost with a little bit of cleanup work done in order to get a working version.
+
 
 Summary of my changes/additions:
 
