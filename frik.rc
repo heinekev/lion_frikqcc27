@@ -1,0 +1,265 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""..\\res\\frikqcc.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "..\\res\\frikqcc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINWIN DIALOG DISCARDABLE  0, 0, 332, 177
+STYLE DS_NOFAILCREATE | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "FrikQCC"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Close",ID_CANCEL,265,155,65,15
+    LISTBOX         IDC_LIST1,7,7,318,107,NOT LBS_NOTIFY | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Recompile",ID_OK,200,155,65,15
+    PUSHBUTTON      "Edit",IDC_EDITBUTTON,130,155,70,15
+    PUSHBUTTON      "Help",IDC_HELPBUTTON,0,155,65,15
+    PUSHBUTTON      "Options",IDC_OPTIONS,66,155,63,15
+    EDITTEXT        IDC_TEXT,13,122,291,26,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_OPDIALOG DIALOGEX 0, 0, 268, 191
+STYLE DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "FrikQCC options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,141,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,196,170,50,14
+    CONTROL         "Display summary on compile",IDC_SUMMARY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,115,10
+    CONTROL         "Close on successful compile",IDC_PAUSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,17,105,10
+    CONTROL         "Compile on Startup",IDC_COS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,28,75,10
+    CONTROL         "Write error.log",IDC_LOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,39,65,10
+    EDITTEXT        IDC_HELPLOC,8,171,124,12,ES_AUTOHSCROLL
+    LTEXT           "Help Location",IDC_STATIC,8,160,83,8
+    EDITTEXT        IDC_EDITOR,141,142,120,13,ES_AUTOHSCROLL
+    LTEXT           "Edit Command",IDC_STATIC,141,132,118,8
+    LTEXT           "Warning Level",IDC_STATIC,148,8,50,9
+    CONTROL         "Non Vector Parms",IDC_OP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,79,72,9
+    CONTROL         "Eliminate Temporary Variables",IDC_OT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,58,109,12
+    CONTROL         "Shorten ifs",IDC_OI,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,68,54,11
+    GROUPBOX        "Optimizations",IDC_STATIC,7,50,254,80
+    EDITTEXT        IDC_MOPARMS,8,143,125,13,ES_AUTOHSCROLL
+    LTEXT           "Additional Parameters",IDC_STATIC,8,132,102,10
+    CONTROL         "Eliminate Constant Names and Defs",IDC_OC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,88,127,11
+    CONTROL         "Eliminate Duplicate Defs",IDC_OD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,97,93,11
+    CONTROL         "Hash Lookup in CopyString",IDC_OS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,58,101,9
+    CONTROL         "Eliminate Local Names",IDC_OL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,68,88,9
+    CONTROL         "Eliminate Function Names",IDC_ON,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,78,96,10
+    CONTROL         "Eliminate Filenames",IDC_OF,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,88,79,8
+    CONTROL         "Add Logical Jumps",IDC_OO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,98,78,10
+    CONTROL         "Flatten Constant Arithmetic",IDC_OA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,108,115,8
+    CONTROL         "Recycle Temps",IDC_OR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,106,66,12
+    CONTROL         "Eliminate Unreferenced Defs",IDC_OU,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,117,109,10
+    EDITTEXT        IDC_WARN,201,7,29,11,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINWIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 325
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_OPDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", " \0"
+            VALUE "FileDescription", "FrikQCC for Windows\0"
+            VALUE "FileVersion", "47\0"
+            VALUE "InternalName", "frikgui\0"
+            VALUE "LegalCopyright", "Copyleft © 1999-2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "frikgui.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "FrikQCC\0"
+            VALUE "ProductVersion", "2.7.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Edit &makefile",              ID_EDIT_PROGSSRC
+        MENUITEM "&View Output",                ID_EDIT_VIEWOUTPUT
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "..\res\frikqcc.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

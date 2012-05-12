@@ -1,0 +1,142 @@
+Heinepro:compiler heinekev$ make
+cmdlib.c:224:26: warning: unused parameter 'completed' [-Wunused-parameter]
+void EndProgram (boolean completed)
+                         ^
+cmdlib.c:271:8: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+        print(text);
+              ^~~~
+2 warnings generated.
+pr_comp.c:148:7: warning: missing field 'op' initializer [-Wmissing-field-initializers]
+ {NULL}
+      ^
+pr_comp.c:640:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+        if (cn = PR_GetImmediate())
+            ~~~^~~~~~~~~~~~~~~~~~~
+pr_comp.c:640:9: note: place parentheses around the assignment to silence this warning
+        if (cn = PR_GetImmediate())
+               ^
+            (                     )
+pr_comp.c:640:9: note: use '==' to turn this assignment into an equality comparison
+        if (cn = PR_GetImmediate())
+               ^
+               ==
+pr_comp.c:1085:6: warning: unused variable 'i' [-Wunused-variable]
+        int i;
+            ^
+pr_comp.c:1891:16: warning: unused variable 'm' [-Wunused-variable]
+        int index, i, m;
+                      ^
+pr_comp.c:2073:9: warning: unused variable 'name' [-Wunused-variable]
+        char            *name;
+                         ^
+5 warnings generated.
+pr_lex.c:37:39: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+type_t  type_void = {ev_void, &def_void};
+                                       ^
+pr_lex.c:38:45: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+type_t  type_string = {ev_string, &def_string};
+                                             ^
+pr_lex.c:39:42: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+type_t  type_float = {ev_float, &def_float};
+                                          ^
+pr_lex.c:40:45: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+type_t  type_vector = {ev_vector, &def_vector};
+                                             ^
+pr_lex.c:41:45: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+type_t  type_entity = {ev_entity, &def_entity};
+                                             ^
+pr_lex.c:42:42: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+type_t  type_field = {ev_field, &def_field};
+                                          ^
+pr_lex.c:43:67: warning: missing field 'num_parms' initializer [-Wmissing-field-initializers]
+type_t  type_function = {ev_function, &def_function,NULL,&type_void};
+                                                                   ^
+pr_lex.c:45:48: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+type_t  type_pointer = {ev_pointer, &def_pointer};
+                                                ^
+pr_lex.c:47:36: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+type_t  type_int = {ev_int, &def_int};
+                                    ^
+pr_lex.c:49:66: warning: missing field 'num_parms' initializer [-Wmissing-field-initializers]
+type_t  type_floatfield = {ev_field, &def_field, NULL, &type_float};
+                                                                  ^
+pr_lex.c:53:37: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+def_t   def_void = {&type_void, "temp"};
+                                      ^
+pr_lex.c:54:41: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+def_t   def_string = {&type_string, "temp"};
+                                          ^
+pr_lex.c:55:39: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+def_t   def_float = {&type_float, "temp"};
+                                        ^
+pr_lex.c:56:41: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+def_t   def_vector = {&type_vector, "temp"};
+                                          ^
+pr_lex.c:57:41: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+def_t   def_entity = {&type_entity, "temp"};
+                                          ^
+pr_lex.c:58:39: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+def_t   def_field = {&type_field, "temp"};
+                                        ^
+pr_lex.c:59:45: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+def_t   def_function = {&type_function, "temp"};
+                                              ^
+pr_lex.c:60:43: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+def_t   def_pointer = {&type_pointer, "temp"};
+                                            ^
+pr_lex.c:61:35: warning: missing field 'next' initializer [-Wmissing-field-initializers]
+def_t   def_int = {&type_int, "temp"};
+                                    ^
+pr_lex.c:716:4: warning: implicit declaration of function 'ParseParms' is invalid in C99 [-Wimplicit-function-declaration]
+                        ParseParms(pr_immediate_string);
+                        ^
+pr_lex.c:1015:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+    fprintf(logfile, data);
+                     ^~~~
+pr_lex.c:1076:11: warning: conversion specifies type 'char *' but the argument has type 'int' [-Wformat]
+        print ("%s(%i): warning:Q%i: %s", level, strings + s_file, pr_source_line, string);
+                ~^                        ~~~~~
+                %d
+pr_lex.c:1076:14: warning: conversion specifies type 'int' but the argument has type 'char *' [-Wformat]
+        print ("%s(%i): warning:Q%i: %s", level, strings + s_file, pr_source_line, string);
+                   ~^                            ~~~~~~~~~~~~~~~~
+                   %s
+pr_lex.c:1192:26: warning: unused variable 't' [-Wunused-variable]
+        type_t  *type, *insert, *t;
+                                 ^
+24 warnings generated.
+qcc.c:356:14: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+        for (i=0 ; i<numstatements ; i++)
+                   ~^~~~~~~~~~~~~~
+qcc.c:367:14: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+        for (i=0 ; i<numfunctions ; i++)
+                   ~^~~~~~~~~~~~~
+qcc.c:380:14: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+        for (i=0 ; i<numglobaldefs ; i++)
+                   ~^~~~~~~~~~~~~~
+qcc.c:390:14: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+        for (i=0 ; i<numfielddefs ; i++)
+                   ~^~~~~~~~~~~~~
+qcc.c:400:14: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+        for (i=0 ; i<numpr_globals ; i++)
+                   ~^~~~~~~~~~~~~~
+5 warnings generated.
+main.c:52:2: warning: implicit declaration of function 'ParseParms' is invalid in C99 [-Wimplicit-function-declaration]
+        ParseParms(commandline);
+        ^
+main.c:170:11: warning: implicit declaration of function 'PR_FindDefine' is invalid in C99 [-Wimplicit-function-declaration]
+        if (p == PR_FindDefine("SYSTEM_CRC")) 
+                 ^
+main.c:177:3: warning: implicit declaration of function 'PrintStrings' is invalid in C99 [-Wimplicit-function-declaration]
+                PrintStrings();
+                ^
+main.c:179:3: warning: implicit declaration of function 'PrintGlobals' is invalid in C99 [-Wimplicit-function-declaration]
+                PrintGlobals();
+                ^
+main.c:181:3: warning: implicit declaration of function 'PrintFunctions' is invalid in C99 [-Wimplicit-function-declaration]
+                PrintFunctions();
+                ^
+main.c:183:3: warning: implicit declaration of function 'PrintFields' is invalid in C99 [-Wimplicit-function-declaration]
+                PrintFields();
+                ^
+6 warnings generated.

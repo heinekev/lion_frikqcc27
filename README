@@ -1,0 +1,45 @@
+FrikQCC 2.7:  QuakeC Compiler
+-----
+
+Frikqcc is released under the GNU General Public License
+
+I have a recent interest in Quake modding, however there are no available QuakeC compilers for OS X 10.7.
+Luckily, source is available for many of the better compilers back in their prime.  This is just a rehost
+with a little bit of cleanup work done in order to get a working version for OS X 10.7.  
+
+Summary of my changes/additions:
+
+qcc.c:
+-----
+FUNCTION char *PR_GlobalStringNoContents (gofs_t ofs)
+LINE 625
+   // Heinekev 5/12/2012
+   // addressed error below by commenting out offending line (can't find what it's intended purpose is)
+   //
+   // qcc.c:625:4: error: use of undeclared identifier 'plock'
+   //                        plock=blah;
+   //                        ^
+   // qcc.c:625:10: error: use of undeclared identifier 'blah'
+   //                        plock=blah;
+   //	plock=blah;
+
+main.c:
+------
+FUNCTION int main (int argc, char **argv)
+LINE 170
+// write progdefs.h
+
+	crc = PR_WriteProgdefs ("progdefs.h");
+		// Heinekev 5/12/2012
+		// addressed error below -
+		// if (p = PR_FindDefine("SYSTEM_CRC"))
+		// ERROR: main.c:166:8: note: use '==' to turn this assignment into an equality comparison
+	if (p == PR_FindDefine("SYSTEM_CRC")) 
+		crc = pr_defines[p].value._float;
+
+
+ORIGINAL AUTHORS DESCRIPTION BELOW:
+-----
+
+FrikQCC started just before the Quake engine source release last year. Based off of Johathan Roy's FastQCC, I tried to bring new features to the code to make Quake more appealing a language to high nosed programmers that said it wasn't a 'proper language'.
+Early in 2000, JP Grossman released qccx, which proved to be a major turning point in frikqcc. Though most of his engine data hacking features leave me a bit dry, the optimizations really got my mind working in overdrive.
